@@ -63,8 +63,7 @@ const useStyles = makeStyles((theme) => ({
             gridTemplateColumns: '40px',
             textAlign: 'center',
             '& span': {
-                backgroundColor: '#111111',
-                color: '#fff',
+                border: '1px solid #f1dddd',
                 display: 'grid',
                 alignItems: 'center',
                 justifyContent: 'center',
