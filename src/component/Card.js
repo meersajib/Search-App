@@ -11,10 +11,7 @@ import SkipNextIcon from '@material-ui/icons/SkipNext';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        display: 'grid',
-        gridTemplateColumns: 'auto 1fr',
         border: '1px solid #f1dddd',
-        gridGap: '20px',
         padding: '20px',
         boxShadow: 'none',
         marginTop: '20px',
@@ -36,13 +33,20 @@ const useStyles = makeStyles((theme) => ({
         paddingLeft: theme.spacing(1),
         paddingBottom: theme.spacing(1),
     },
+    imageContainer: {
+        display: 'grid',
+        gridTemplateColumns: '100px 1fr',
+        gridGap: '20px'
+    },
         img:{
     height: '80px',
-    border: '1px solid #f1dddd',
     borderRadius: '100px',
     padding: '10px',
     },
     textWrapper: {
+        display: 'grid',
+        gridTemplateColumns: '100px 1fr',
+        gridGap: '20px',
        '& h3':{
             marginTop: '0',
         },
@@ -79,13 +83,22 @@ export default function MediaControlCard() {
     return (
         <Card className={classes.root}>
             <div className={classes.imageContainer}>
+                <div className={classes.left}>
                 <img className={classes.img} src='/logo192.png' alt='Avatar' />
-                <h4>Expriation</h4>
-            </div>
-            <div className={classes.textWrapper}>
+                </div>
+                <div className={classes.right}>
                 <h3>Company Name</h3>
                 <h4>Required Brands</h4>
                 <p>Total Items</p>
+               
+                </div>
+                
+            </div>
+            <div className={classes.textWrapper}>
+                <div className={classes.left}>
+                <h4>Expriation</h4>
+                </div>
+                <div className={classes.right}>
                 <div className={classes.counter}>
                     <span>
                         <span>31</span> 
@@ -100,6 +113,7 @@ export default function MediaControlCard() {
                         <span>4</span>
                         Minute
                     </span>
+                </div>
                 </div>
             </div>
         </Card>

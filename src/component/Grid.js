@@ -22,26 +22,26 @@ export default function AutoGrid() {
     return (
         <div className={classes.root}>
             <Grid container spacing={3}>
-                <Grid item xs>
+                <Grid item xs={12} md={6} lg={4}>
                     <MediaControlCard />
                 </Grid>
-                <Grid item xs>
+                <Grid item xs={12} md={6} lg={4}>
                     <MediaControlCard />
                 </Grid>
-                <Grid item xs>
+                <Grid item xs={12} md={6} lg={4}>
                     <MediaControlCard />
                 </Grid>
             </Grid>
             <Grid container spacing={3}>
-                <Grid item xs>
+                <Grid item xs={12} md={6} lg={4}>
                     <MediaControlCard />
                 </Grid>
-                <Grid item xs>
+                <Grid item xs={12} md={6} lg={4}>
                     <MediaControlCard />
                 </Grid>
-                <Grid item xs>
+                {/* <Grid item xs={12} md={6} lg={4}>
                     <MediaControlCard />
-                </Grid>
+                </Grid> */}
             </Grid>
         </div>
     );
